@@ -16,7 +16,7 @@ public class Logo
         |__/      |__/|__/ \_______/|__/     |__/ \______/     \_/    \_______/|__/");
         Console.WriteLine("");
         Console.WriteLine("");
-        Console.WriteLine("                                   FileMover v1.0.0 by czareq089");
+        Console.WriteLine("                                   FileMover v1.0.1 by czareq089");
         Console.WriteLine("=============================================================================================");
     }
 }

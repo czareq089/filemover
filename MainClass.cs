@@ -15,9 +15,15 @@ class MainClass
                 Logo.Print();
                 Console.WriteLine("Welcome to FileMover!");
                 Console.WriteLine("The program moves files from one directory to another based on a filetype.");
-                Console.WriteLine(
-                    @"Please choose the directory you want to move files from: (leave blank for current \downloads)");
+                Console.WriteLine();
+                Console.WriteLine(@"Please choose the directory you want to move files from: (leave blank for default downloads folder)gith");
                 string from = Console.ReadLine();
+                switch (from)
+                {
+                    case "":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
+                        break;
+                }
                 Console.WriteLine(
                     "=============================================================================================");
                 Console.WriteLine("Here are the files in the directory you chose:");
@@ -25,16 +31,25 @@ class MainClass
                 ListFiles(from);
                 Console.WriteLine("");
                 Console.WriteLine(
-                    @"Please choose the directory you want to move files to: (leave blank for current \desktop\folder)");
+                    "=============================================================================================");
+                Console.WriteLine(@"Please choose the directory you want to move files to: (leave blank for default desktop folder)");
                 string to = Console.ReadLine();
+                switch (to)
+                {
+                    case "":
+                        to = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\FileMover";
+                        break;
+                }
+                Console.WriteLine(
+                    "=============================================================================================");
                 Console.WriteLine("Please enter the filetype you want to exclude: (leave blank for none)");
-                Console.WriteLine("");
                 string exclude = Console.ReadLine();
-                Console.WriteLine("");
                 Console.WriteLine("=============================================================================================");
-                Console.WriteLine("Are you sure you want to move these files? (y/n)");
-                Console.WriteLine("");
+                Console.Write("Are you sure you want to move these files? (y/n) ");
                 string choice = Console.ReadLine();
+                Console.WriteLine(
+                    "=============================================================================================");
+                Console.WriteLine("");
                 switch(choice)
                 {
                     case "y":
@@ -63,11 +78,6 @@ class MainClass
     }
     static void MoveFiles(string from, string to, string exclude)
     {
-        string downloadsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
-        if (from == "")
-        {
-            from = downloadsPath;
-        }
         if (to == "")
         {
             to = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\FileMover";
@@ -87,18 +97,19 @@ class MainClass
             }
             else
             {
-                Console.WriteLine("Moving " + fileName + "...");
-                File.Move(file, to + "\\" + fileName);
+                string subfolder = Path.Combine(to, fileExtension.TrimStart('.'));
+                if (!Directory.Exists(subfolder))
+                {
+                    Directory.CreateDirectory(subfolder);
+                }
+                string destinationPath = Path.Combine(subfolder, fileName);
+                Console.WriteLine("Moving " + fileName + " to " + subfolder + "...");
+                File.Move(file, destinationPath);
             }
         }
     }
     static void ListFiles(string from)
     {
-        string downloadsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
-        if (from == "")
-        {
-            from = downloadsPath;
-        }
         string[] files = Directory.GetFiles(from);
         foreach (var file in files)
         {

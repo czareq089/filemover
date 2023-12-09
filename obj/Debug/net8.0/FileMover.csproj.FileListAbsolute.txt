@@ -1,0 +1,28 @@
+C:\Users\czareq089\RiderProjects\FileMover\bin\Debug\net8.0\FileMover.exe
+C:\Users\czareq089\RiderProjects\FileMover\bin\Debug\net8.0\FileMover.deps.json
+C:\Users\czareq089\RiderProjects\FileMover\bin\Debug\net8.0\FileMover.runtimeconfig.json
+C:\Users\czareq089\RiderProjects\FileMover\bin\Debug\net8.0\FileMover.dll
+C:\Users\czareq089\RiderProjects\FileMover\bin\Debug\net8.0\FileMover.pdb
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.AssemblyInfoInputs.cache
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.AssemblyInfo.cs
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.csproj.CoreCompileInputs.cache
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.dll
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\refint\FileMover.dll
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.pdb
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\FileMover.genruntimeconfig.cache
+C:\Users\czareq089\RiderProjects\FileMover\obj\Debug\net8.0\ref\FileMover.dll
+C:\Users\czareq089\Desktop\File Mover\bin\Debug\net8.0\FileMover.exe
+C:\Users\czareq089\Desktop\File Mover\bin\Debug\net8.0\FileMover.deps.json
+C:\Users\czareq089\Desktop\File Mover\bin\Debug\net8.0\FileMover.runtimeconfig.json
+C:\Users\czareq089\Desktop\File Mover\bin\Debug\net8.0\FileMover.dll
+C:\Users\czareq089\Desktop\File Mover\bin\Debug\net8.0\FileMover.pdb
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.AssemblyInfoInputs.cache
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.AssemblyInfo.cs
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.csproj.CoreCompileInputs.cache
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.dll
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\refint\FileMover.dll
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.pdb
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\FileMover.genruntimeconfig.cache
+C:\Users\czareq089\Desktop\File Mover\obj\Debug\net8.0\ref\FileMover.dll
