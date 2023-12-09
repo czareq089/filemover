@@ -16,12 +16,30 @@ class MainClass
                 Console.WriteLine("Welcome to FileMover!");
                 Console.WriteLine("The program moves files from one directory to another based on a filetype.");
                 Console.WriteLine();
-                Console.WriteLine(@"Please choose the directory you want to move files from: (leave blank for default downloads folder)gith");
+                Console.WriteLine(@"Please choose the directory you want to move files from: (leave blank for default downloads folder)");
                 string from = Console.ReadLine();
                 switch (from)
                 {
                     case "":
                         from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
+                        break;
+                    case "Pictures":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Pictures";
+                        break;
+                    case "Documents":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Documents";
+                        break;
+                    case "Music":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Music";
+                        break;
+                    case "Videos":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Videos";
+                        break;
+                    case "Desktop":
+                        from = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice, aborting...");
                         break;
                 }
                 Console.WriteLine(
@@ -37,7 +55,7 @@ class MainClass
                 switch (to)
                 {
                     case "":
-                        to = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\FileMover";
+                        to = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Organised";
                         break;
                 }
                 Console.WriteLine(
@@ -91,7 +109,7 @@ class MainClass
         {
             string fileName = Path.GetFileName(file);
             string fileExtension = Path.GetExtension(file);
-            if (fileExtension == exclude)
+            if (fileExtension == exclude || fileExtension == ".ini" || fileExtension == ".db" || fileExtension == ".lnk" || fileExtension == ".url")
             {
                 Console.WriteLine("Excluding " + fileName + "...");
             }
@@ -113,7 +131,15 @@ class MainClass
         string[] files = Directory.GetFiles(from);
         foreach (var file in files)
         {
-            Console.WriteLine(Path.GetFileName(file));
+            string fileExtension = Path.GetExtension(file);
+            if(fileExtension == ".ini" || fileExtension == ".db" || fileExtension == ".lnk" || fileExtension == ".url")
+            {
+                continue;
+            }
+            else
+            {
+                Console.WriteLine(Path.GetFileName(file));
+            }
         }
     }
 }
